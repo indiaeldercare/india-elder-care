@@ -1,0 +1,935 @@
+/* ==========================================================================
+   India Elder Care Services - Soft, Soothing, Eye-Friendly Stylesheet
+   Focused on 4 Key Services & Compassionate Elder Care
+   ========================================================================== */
+
+:root {
+  /* Soft, Soothing Palette (Gentle on the eyes, nature & healing inspired) */
+  --sage-primary: #335c49;       /* Deep gentle sage green */
+  --sage-dark: #1f3a2e;          /* Forest charcoal */
+  --sage-soft: #e8f0ec;          /* Very soft sage tint */
+  --sage-light: #d4e4db;         /* Muted sage border/highlight */
+  
+  --warm-bg: #faf8f5;           /* Soft warm linen/cream */
+  --surface: #ffffff;
+  --surface-warm: #f4f0ea;      /* Gentle warm sand */
+  --border-soft: #e4ded5;       /* Subtle warm border */
+  --border-focus: #335c49;
+  
+  --accent-warm: #c16e47;        /* Soft terracotta / muted amber */
+  --accent-hover: #a85834;
+  --accent-soft: #fcf1eb;
+  
+  /* Typography & Text */
+  --text-main: #243029;          /* Soft forest charcoal (high contrast but non-glaring) */
+  --text-muted: #53645b;         /* Gentle muted sage-slate */
+  --text-light: #73837a;
+  --text-white: #ffffff;
+  
+  --font-heading: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-body: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-lg: 22px;
+  --radius-full: 9999px;
+  
+  --shadow-subtle: 0 2px 8px rgba(35, 48, 41, 0.04), 0 1px 2px rgba(35, 48, 41, 0.02);
+  --shadow-card: 0 4px 16px rgba(35, 48, 41, 0.06), 0 1px 3px rgba(35, 48, 41, 0.03);
+  --shadow-hover: 0 10px 24px rgba(35, 48, 41, 0.09);
+  
+  --transition: 200ms ease;
+}
+
+/* Reset & Basics */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--warm-bg);
+  color: var(--text-main);
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: color var(--transition);
+}
+
+button, input, select, textarea {
+  font-family: inherit;
+  font-size: inherit;
+}
+
+.container {
+  width: 100%;
+  max-width: 1160px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* ==========================================================================
+   Top Contact Bar
+   ========================================================================== */
+.top-bar {
+  background-color: var(--sage-dark);
+  color: #dbe7e1;
+  font-size: 0.85rem;
+  padding: 8px 0;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+.top-bar-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+.top-contacts {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  flex-wrap: wrap;
+}
+.top-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+.top-item svg {
+  width: 15px;
+  height: 15px;
+  fill: currentColor;
+  opacity: 0.9;
+}
+.top-item a {
+  color: #ffffff;
+  font-weight: 600;
+}
+.top-item a:hover {
+  text-decoration: underline;
+}
+.top-badge {
+  background: rgba(255,255,255,0.12);
+  padding: 2px 10px;
+  border-radius: var(--radius-full);
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: #e2ede8;
+}
+
+/* ==========================================================================
+   Header & Navigation
+   ========================================================================== */
+.site-header {
+  position: relative;
+  background: var(--warm-bg);
+  border-bottom: 1px solid var(--border-soft);
+  box-shadow: 0 4px 16px rgba(36, 48, 41, 0.05);
+}
+
+/* Centered Brand Showcase */
+.brand-center-block {
+  text-align: center;
+  padding: 22px 0 14px 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+.brand-center-link {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+}
+.brand-title-row {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+}
+.brand-center-mark {
+  width: 48px;
+  height: 48px;
+  border-radius: 14px;
+  background: linear-gradient(135deg, var(--sage-primary), #457861);
+  color: #ffffff;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 12px rgba(51, 92, 73, 0.22);
+  flex-shrink: 0;
+}
+.brand-center-mark svg {
+  width: 26px;
+  height: 26px;
+  fill: currentColor;
+}
+.brand-center-title {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: #000000; /* Pure black */
+  line-height: 1.15;
+  letter-spacing: -0.025em;
+  margin: 0;
+}
+.brand-center-tagline {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--sage-primary);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-top: 5px;
+}
+
+/* Navigation & Actions Sub-Bar */
+.header-nav-bar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  padding: 10px 0 12px 0;
+  flex-wrap: wrap;
+}
+.nav-menu {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.nav-link {
+  font-weight: 600;
+  font-size: 0.92rem;
+  color: var(--text-main);
+  padding: 6px 0;
+  position: relative;
+  text-decoration: none;
+}
+.nav-link:hover {
+  color: var(--sage-primary);
+}
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--sage-primary);
+  transition: width var(--transition);
+}
+.nav-link:hover::after {
+  width: 100%;
+}
+
+.nav-divider {
+  width: 1px;
+  height: 22px;
+  background: var(--border-soft);
+  display: inline-block;
+}
+
+.header-cta {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+}
+
+/* Buttons */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-weight: 700;
+  padding: 9px 18px;
+  border-radius: var(--radius-md);
+  font-size: 0.88rem;
+  cursor: pointer;
+  border: 1.5px solid transparent;
+  transition: all var(--transition);
+  white-space: nowrap;
+}
+.btn svg {
+  width: 17px;
+  height: 17px;
+  fill: currentColor;
+}
+.btn-primary {
+  background: var(--sage-primary);
+  color: #ffffff;
+  box-shadow: 0 3px 10px rgba(51, 92, 73, 0.25);
+}
+.btn-primary:hover {
+  background: var(--sage-dark);
+  transform: translateY(-1px);
+}
+.btn-whatsapp {
+  background: #25d366;
+  color: #ffffff;
+  border-color: #25d366;
+  box-shadow: 0 3px 10px rgba(37, 211, 102, 0.25);
+}
+.btn-whatsapp:hover {
+  background: #1eb857;
+  transform: translateY(-1px);
+}
+.btn-outline {
+  background: transparent;
+  border-color: var(--border-soft);
+  color: var(--text-main);
+}
+.btn-outline:hover {
+  border-color: var(--sage-primary);
+  color: var(--sage-primary);
+  background: var(--sage-soft);
+}
+.btn-accent {
+  background: var(--accent-warm);
+  color: #ffffff;
+  box-shadow: 0 3px 10px rgba(193, 110, 71, 0.25);
+}
+.btn-accent:hover {
+  background: var(--accent-hover);
+  transform: translateY(-1px);
+}
+
+/* ==========================================================================
+   Hero Section
+   ========================================================================== */
+.hero {
+  padding: 50px 0 70px 0;
+  background: linear-gradient(180deg, var(--warm-bg) 0%, #f4f8f5 100%);
+  border-bottom: 1px solid var(--border-soft);
+}
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 40px;
+  align-items: center;
+}
+.hero-text {
+  max-width: 580px;
+}
+.pill-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--sage-soft);
+  color: var(--sage-primary);
+  padding: 5px 14px;
+  border-radius: var(--radius-full);
+  font-size: 0.82rem;
+  font-weight: 700;
+  margin-bottom: 18px;
+  border: 1px solid var(--sage-light);
+}
+.pill-badge .dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--sage-primary);
+}
+.hero-title {
+  font-size: 2.65rem;
+  font-weight: 800;
+  color: var(--text-main);
+  line-height: 1.2;
+  margin-bottom: 18px;
+  letter-spacing: -0.02em;
+}
+.hero-title .highlight {
+  color: var(--sage-primary);
+}
+.hero-desc {
+  font-size: 1.08rem;
+  color: var(--text-muted);
+  line-height: 1.7;
+  margin-bottom: 26px;
+}
+.hero-actions {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  flex-wrap: wrap;
+  margin-bottom: 28px;
+}
+.hero-image-wrap {
+  position: relative;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-card);
+  border: 4px solid #ffffff;
+}
+.hero-image-wrap img {
+  width: 100%;
+  height: 380px;
+  object-fit: cover;
+}
+.hero-card-overlay {
+  position: absolute;
+  bottom: 16px;
+  left: 16px;
+  right: 16px;
+  background: rgba(255, 255, 255, 0.94);
+  backdrop-filter: blur(8px);
+  padding: 14px 18px;
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-subtle);
+  border: 1px solid var(--border-soft);
+}
+.overlay-title {
+  font-size: 0.9rem;
+  font-weight: 800;
+  color: var(--sage-primary);
+}
+.overlay-sub {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+}
+
+/* Quick Stats Bar */
+.trust-bar {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  padding: 20px;
+  background: #ffffff;
+  border: 1px solid var(--border-soft);
+  border-radius: var(--radius-md);
+  margin-top: 30px;
+}
+.trust-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.trust-icon {
+  width: 38px;
+  height: 38px;
+  border-radius: 10px;
+  background: var(--sage-soft);
+  color: var(--sage-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.trust-icon svg {
+  width: 20px;
+  height: 20px;
+  fill: currentColor;
+}
+.trust-info h4 {
+  font-size: 0.85rem;
+  font-weight: 800;
+  color: var(--text-main);
+}
+.trust-info p {
+  font-size: 0.74rem;
+  color: var(--text-muted);
+}
+
+/* ==========================================================================
+   The 4 Core Services Section
+   ========================================================================== */
+.section {
+  padding: 70px 0;
+}
+.section-header {
+  text-align: center;
+  max-width: 680px;
+  margin: 0 auto 46px auto;
+}
+.section-kicker {
+  display: inline-block;
+  font-size: 0.8rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--sage-primary);
+  margin-bottom: 8px;
+}
+.section-title {
+  font-size: 2.15rem;
+  font-weight: 800;
+  color: var(--text-main);
+  line-height: 1.25;
+  margin-bottom: 12px;
+  letter-spacing: -0.02em;
+}
+.section-desc {
+  font-size: 1rem;
+  color: var(--text-muted);
+  line-height: 1.65;
+}
+
+/* 4 Services Grid */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 26px;
+}
+.service-card {
+  background: #ffffff;
+  border: 1px solid var(--border-soft);
+  border-radius: var(--radius-lg);
+  padding: 32px;
+  box-shadow: var(--shadow-subtle);
+  transition: all var(--transition);
+  display: flex;
+  flex-direction: column;
+}
+.service-card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-hover);
+  border-color: var(--sage-light);
+}
+.service-header {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+.service-number {
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: var(--sage-primary);
+  background: var(--sage-soft);
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.service-title-box h3 {
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: var(--text-main);
+  margin-bottom: 4px;
+}
+.service-tag {
+  font-size: 0.76rem;
+  font-weight: 700;
+  color: var(--accent-warm);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+.service-desc {
+  font-size: 0.94rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+.service-points {
+  list-style: none;
+  margin-bottom: 24px;
+  flex-grow: 1;
+}
+.service-point {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 0.88rem;
+  color: var(--text-main);
+  margin-bottom: 10px;
+}
+.service-point svg {
+  width: 17px;
+  height: 17px;
+  fill: var(--sage-primary);
+  flex-shrink: 0;
+  margin-top: 3px;
+}
+.service-footer {
+  border-top: 1px dashed var(--border-soft);
+  padding-top: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.service-action-link {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--sage-primary);
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+.service-action-link:hover {
+  text-decoration: underline;
+}
+
+/* ==========================================================================
+   Clinical & Doctor/Nurse At-Home Spotlight
+   ========================================================================== */
+.clinical-section {
+  background: var(--surface-warm);
+  border-top: 1px solid var(--border-soft);
+  border-bottom: 1px solid var(--border-soft);
+}
+.clinical-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+}
+.clinical-card {
+  background: #ffffff;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  border: 1px solid var(--border-soft);
+  box-shadow: var(--shadow-subtle);
+  display: flex;
+  flex-direction: column;
+}
+.clinical-img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+}
+.clinical-body {
+  padding: 26px;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+.clinical-body h3 {
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: var(--text-main);
+  margin-bottom: 8px;
+}
+.clinical-body p {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+  margin-bottom: 18px;
+  flex-grow: 1;
+}
+
+/* ==========================================================================
+   Errands & Travel Spotlight
+   ========================================================================== */
+.lifestyle-grid {
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: 36px;
+  align-items: center;
+}
+.lifestyle-img {
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-card);
+  height: 360px;
+  width: 100%;
+  object-fit: cover;
+  border: 3px solid #ffffff;
+}
+
+/* ==========================================================================
+   Pricing & Membership Package
+   ========================================================================== */
+.package-box {
+  background: #ffffff;
+  border: 2px solid var(--sage-primary);
+  border-radius: var(--radius-lg);
+  padding: 40px;
+  box-shadow: var(--shadow-card);
+  max-width: 820px;
+  margin: 0 auto;
+}
+.package-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 16px;
+  border-bottom: 1px solid var(--border-soft);
+  padding-bottom: 24px;
+  margin-bottom: 24px;
+}
+.package-badge {
+  background: var(--sage-soft);
+  color: var(--sage-primary);
+  font-weight: 800;
+  font-size: 0.78rem;
+  padding: 4px 12px;
+  border-radius: var(--radius-full);
+  text-transform: uppercase;
+}
+.package-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+  list-style: none;
+  margin-bottom: 28px;
+}
+.package-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 0.92rem;
+  color: var(--text-main);
+}
+.package-item svg {
+  width: 18px;
+  height: 18px;
+  fill: var(--sage-primary);
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+.package-contact-bar {
+  background: var(--sage-soft);
+  border-radius: var(--radius-md);
+  padding: 18px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+/* ==========================================================================
+   Quick Booking / Inquiry Form
+   ========================================================================== */
+.booking-section {
+  background: #ffffff;
+  border-top: 1px solid var(--border-soft);
+}
+.booking-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.1fr;
+  gap: 40px;
+  align-items: center;
+}
+.form-group {
+  margin-bottom: 14px;
+}
+.form-label {
+  display: block;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--text-main);
+  margin-bottom: 5px;
+}
+.form-control {
+  width: 100%;
+  padding: 10px 14px;
+  border: 1.5px solid var(--border-soft);
+  border-radius: var(--radius-sm);
+  background: #fdfcfb;
+  color: var(--text-main);
+  font-size: 0.92rem;
+  transition: border var(--transition);
+}
+.form-control:focus {
+  outline: none;
+  border-color: var(--border-focus);
+  background: #ffffff;
+}
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+/* ==========================================================================
+   Footer
+   ========================================================================== */
+.site-footer {
+  background: var(--sage-dark);
+  color: #c9d8d1;
+  padding: 50px 0 24px 0;
+  border-top: 1px solid rgba(255,255,255,0.08);
+  font-size: 0.9rem;
+}
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr 1fr;
+  gap: 36px;
+  margin-bottom: 40px;
+}
+.footer-brand-mark {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  background: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  flex-shrink: 0;
+}
+.footer-brand-mark svg {
+  width: 24px;
+  height: 24px;
+  fill: #e05353; /* Pleasant warm rose-red heart */
+  transition: transform var(--transition);
+}
+.footer-brand-mark:hover svg {
+  transform: scale(1.1);
+}
+.footer-col h4 {
+  color: #ffffff;
+  font-size: 1.05rem;
+  font-weight: 800;
+  margin-bottom: 16px;
+}
+.footer-links {
+  list-style: none;
+}
+.footer-links li {
+  margin-bottom: 8px;
+}
+.footer-links a:hover {
+  color: #ffffff;
+}
+.footer-contact-box {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.footer-contact-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #e5f0eb;
+}
+.footer-contact-row svg {
+  width: 16px;
+  height: 16px;
+  fill: #86efac;
+}
+.footer-bottom {
+  border-top: 1px solid rgba(255,255,255,0.1);
+  padding-top: 20px;
+  text-align: center;
+  font-size: 0.82rem;
+  color: #9cb5ab;
+}
+
+/* Floating Action Button (WhatsApp) */
+.floating-whatsapp {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  z-index: 1000;
+  width: 54px;
+  height: 54px;
+  background: #25d366;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4);
+  cursor: pointer;
+  transition: transform var(--transition);
+}
+.floating-whatsapp:hover {
+  transform: scale(1.08);
+}
+.floating-whatsapp svg {
+  width: 28px;
+  height: 28px;
+  fill: currentColor;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .brand-center-title {
+    font-size: 2.1rem;
+  }
+  .header-nav-bar {
+    gap: 18px;
+  }
+  .nav-menu {
+    gap: 16px;
+  }
+  .hero-grid {
+    grid-template-columns: 1fr;
+  }
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+  .clinical-grid {
+    grid-template-columns: 1fr;
+  }
+  .lifestyle-grid {
+    grid-template-columns: 1fr;
+  }
+  .package-list {
+    grid-template-columns: 1fr;
+  }
+  .booking-grid {
+    grid-template-columns: 1fr;
+  }
+  .footer-grid {
+    grid-template-columns: 1fr;
+  }
+  .trust-bar {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 650px) {
+  .brand-title-row {
+    flex-direction: column;
+    gap: 8px;
+  }
+  .brand-center-title {
+    font-size: 1.7rem;
+    text-align: center;
+  }
+  .brand-center-tagline {
+    font-size: 0.74rem;
+    text-align: center;
+  }
+  .nav-divider {
+    display: none;
+  }
+  .header-nav-bar {
+    flex-direction: column;
+    gap: 12px;
+    padding: 10px 0 14px 0;
+  }
+  .nav-menu {
+    gap: 8px 16px;
+    font-size: 0.85rem;
+  }
+  .hero-title {
+    font-size: 1.85rem;
+  }
+  .trust-bar {
+    grid-template-columns: 1fr;
+  }
+  .top-bar-content {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 6px;
+  }
+  .top-contacts {
+    justify-content: center;
+  }
+}
