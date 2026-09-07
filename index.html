@@ -586,7 +586,12 @@
           <h3 style="font-size: 1.3rem; font-weight: 800; color: var(--text-main); margin-bottom: 6px;">Request a Callback</h3>
           <p style="font-size: 0.88rem; color: var(--text-muted); margin-bottom: 20px;">We respond promptly within 2 business hours.</p>
 
-          <form id="contactForm">
+          <form id="contactForm" action="https://formsubmit.co/bsrajan2013@gmail.com" method="POST">
+            <!-- FormSubmit Configuration -->
+            <input type="hidden" name="_subject" value="New Consultation Request - India Elder Care Services">
+            <input type="hidden" name="_template" value="table">
+            <input type="hidden" name="_captcha" value="false">
+
             <div class="form-group">
               <label class="form-label" for="userName">Your Full Name *</label>
               <input type="text" id="userName" name="name" class="form-control" placeholder="e.g. Anand Sharma" required>
@@ -627,7 +632,7 @@
               <textarea id="userNotes" name="notes" class="form-control" rows="3" placeholder="Tell us about their age, health condition, or specific support required..."></textarea>
             </div>
 
-            <button type="submit" class="btn btn-primary" style="width: 100%; padding: 12px; font-size: 0.95rem;">
+            <button type="submit" id="submitBtn" class="btn btn-primary" style="width: 100%; padding: 12px; font-size: 0.95rem;">
               <span>Submit Consultation Request</span>
             </button>
             <div id="formFeedback" style="display: none; margin-top: 12px; padding: 10px; border-radius: var(--radius-sm); font-size: 0.85rem; text-align: center;"></div>
