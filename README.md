@@ -2,7 +2,7 @@
 
 A personalized senior care platform providing dignified, compassionate at-home support for elderly parents living in India while their family resides in other cities or abroad.
 
-- 🌐 **Live Website**: [indaeldercareservices.com](http://indaeldercareservices.com)
+- 🌐 **Live Website**: [indiaeldercareservices.com](http://indiaeldercareservices.com)
 - 📦 **GitHub Repository**: [github.com/indiaeldercare/india-elder-care](https://github.com/indiaeldercare/india-elder-care)
 - 💵 **All-Inclusive Fee**: **US\ / month** (flexible monthly / annual membership)
 
@@ -28,12 +28,12 @@ A personalized senior care platform providing dignified, compassionate at-home s
 
 ## ☁️ Hosting & Cloud Deployment Architecture
 
-- **Domain Registrar**: Namecheap (indaeldercareservices.com)
+- **Domain Registrar**: Namecheap (indiaeldercareservices.com)
 - **Hosting Provider**: GitHub Pages (free global CDN with automatic SSL/HTTPS)
 - **DNS Records in Namecheap**:
   - @ (A Records): 185.199.108.153, 185.199.109.153, 185.199.110.153, 185.199.111.153
   - www (CNAME): indiaeldercare.github.io
-- **Continuous Deployment**: Pushing commits to the main branch on GitHub triggers an automatic re-build and re-deploy to indaeldercareservices.com within 30–60 seconds.
+- **Continuous Deployment**: Pushing commits to the main branch on GitHub triggers an automatic re-build and re-deploy to indiaeldercareservices.com within 30–60 seconds.
 
 ---
 

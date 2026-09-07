@@ -4,12 +4,12 @@
 This website is hosted via **GitHub Pages** connected to a custom domain on **Namecheap**:
 - **GitHub Repository**: https://github.com/indiaeldercare/india-elder-care
 - **Production Branch**: main
-- **Live Custom Domain**: http://indaeldercareservices.com (and https once SSL propagation completes)
+- **Live Custom Domain**: http://indiaeldercareservices.com (and https once SSL propagation completes)
 - **Local Workspace**: C:\Users\Rajan. S Balaji\.gemini\antigravity\scratch\india-elder-care-services
 - **Git Binary Path**: C:\Users\Rajan. S Balaji\AppData\Local\Programs\Git\cmd
 - **GitHub CLI Path**: C:\Users\Rajan. S Balaji\AppData\Local\Programs\gh\bin
 
-Any commit pushed to the main branch automatically triggers GitHub Pages to re-deploy and update the live website on indaeldercareservices.com within 30–60 seconds.
+Any commit pushed to the main branch automatically triggers GitHub Pages to re-deploy and update the live website on indiaeldercareservices.com within 30–60 seconds.
 
 ---
 
@@ -30,7 +30,7 @@ Whenever the user requests changes, updates, additions, or modifications to this
 ### Step 3: Require User Approval BEFORE Pushing to Cloud
 - **NEVER** push directly to GitHub without the user's explicit review and approval.
 - Clearly summarize the local modifications made and explicitly ask:
-  > *"Please review the local preview in your browser. Would you like me to deploy these changes live to indaeldercareservices.com?"*
+  > *"Please review the local preview in your browser. Would you like me to deploy these changes live to indiaeldercareservices.com?"*
 
 ### Step 4: Auto-Deploy to Cloud Upon Approval
 - As soon as the user approves (e.g., "yes", "looks good", "deploy", "push"), execute the deployment:
@@ -41,4 +41,4 @@ Whenever the user requests changes, updates, additions, or modifications to this
   git push origin main
   `
 - Confirm that the changes were pushed to GitHub and provide the live site URL:
-  👉 **[Live Website: indaeldercareservices.com](http://indaeldercareservices.com)**
+  👉 **[Live Website: indiaeldercareservices.com](http://indiaeldercareservices.com)**
